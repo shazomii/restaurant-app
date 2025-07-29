@@ -4,7 +4,6 @@ import { home } from "./home.js";
 import { menu } from "./menu.js";
 
 const buttons = document.querySelectorAll("button");
-const content = document.querySelector("div#content");
 
 const navigate = (buttonId) => {
     switch (buttonId) {
@@ -17,14 +16,17 @@ const navigate = (buttonId) => {
         case "about":
             about();
             break;
+        default:
+            home();
     }
 }
 
+const handleNavigation = (event) => {
+    navigate(event.target.id);
+}
+
 buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        content.textContent = "";
-        navigate(button.id);
-    });
+    button.addEventListener("click", handleNavigation);
 });
 
 home();

@@ -1,7 +1,8 @@
 export const about = () => {
     const content = document.querySelector("div#content");
+    content.innerHTML = "";
     
-    const conatiner = document.createElement("div");
+    const container = document.createElement("div");
 
     const title = document.createElement("h1");
     const subtitle = document.createElement("p");
@@ -17,7 +18,7 @@ export const about = () => {
     para3.textContent = "We're a small team with a big love for food that feels like home.";
     para4.textContent = "Come in, take a seat, and let the plate do the talking.";
 
-    conatiner.append(title, subtitle, para1, para2, para3, para4);
+    container.append(title, subtitle, para1, para2, para3, para4);
 
-    content.appendChild(conatiner);
+    content.appendChild(container);
 }

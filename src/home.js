@@ -1,7 +1,8 @@
 export const home = () => {
     const content = document.querySelector("div#content");
+    content.innerHTML = "";
 
-    const conatiner = document.createElement("div");
+    const container = document.createElement("div");
 
     const title = document.createElement("h1");
     const subtitle = document.createElement("p");
@@ -21,7 +22,7 @@ export const home = () => {
     locationHeading.textContent = "Location";
     location.textContent = "123 Main Street, Lagos";
 
-    conatiner.append(title, subtitle, intro, hourHeading, openHours, closedHours, locationHeading, location);
+    container.append(title, subtitle, intro, hourHeading, openHours, closedHours, locationHeading, location);
 
-    content.appendChild(conatiner);
+    content.appendChild(container);
 }
