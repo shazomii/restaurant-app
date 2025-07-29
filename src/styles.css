@@ -1,80 +1,106 @@
 /* Reset and base styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #fafafa;
-  color: #111;
-  line-height: 1.6;
-  font-size: 16px;
-  padding: 2rem;
+html,
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+    color: #111;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 2rem;
 }
 
 /* Layout container */
 #content {
-  max-width: 700px;
-  margin: 3rem auto;
+    max-width: 700px;
+    margin: 3rem auto;
 }
 
 /* Typography */
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
 p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #333;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
 }
 
 /* Navigation */
 header {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 nav button {
-  background: none;
-  border: none;
-  margin: 0 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  color: #333;
-  padding: 0.5rem;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
+    background: none;
+    border: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #333;
+    padding: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
 }
 
 nav button:hover,
 nav button:focus {
-  color: #000;
-  border-color: #000;
-  outline: none;
+    color: #000;
+    border-color: #000;
+    outline: none;
 }
 
+#menu-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#menu-section li {
+    margin-bottom: 0.5rem;
+}
+
+#menu-section h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+ #menu-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 
 /* Responsive spacing */
 @media (max-width: 600px) {
-  body {
-    padding: 1rem;
-  }
+    body {
+        padding: 1rem;
+    }
 
-  nav button {
-    margin: 0 0.5rem;
-  }
+    nav button {
+        margin: 0 0.5rem;
+    }
+
+    #menu-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
