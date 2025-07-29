@@ -1,3 +1,4 @@
+import "./styles.css";
 import { about } from "./about.js";
 import { home } from "./home.js";
 import { menu } from "./menu.js";
@@ -25,6 +26,5 @@ buttons.forEach(button => {
         navigate(button.id);
     });
 });
-
 
 home();
